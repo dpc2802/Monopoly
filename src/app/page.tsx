@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ScrollProgress from "@/components/ScrollProgress";
+import SalaryIncreaseSection from "@/components/SalaryIncreaseSection";
 import WelcomeSection from "@/components/WelcomeSection";
 import ValueProp from "@/components/ValueProp";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       
+      <SalaryIncreaseSection />
       <WelcomeSection />
       <ValueProp />
       <WhyChooseUs />

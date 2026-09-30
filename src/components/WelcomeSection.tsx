@@ -50,7 +50,7 @@ export default function WelcomeSection() {
               Monopoly Recruitment - Where talent meets opportunity - Finding the right role for each person is our aim and increasing your salary is our goal.
             </h3>
             
-            <p className="text-brand-gray-dark text-[15px] sm:text-[17px] leading-relaxed mb-10 font-medium">
+            <p className="text-gray-500 text-[15px] sm:text-[17px] leading-relaxed mb-10 font-medium">
               At Monopoly Recruitment we believe in a professional approach that cuts through the noise. Whether you are a business who are growing or a professional ready to level up and take advantage of the edge we will provide, we are here to ensure the connection is seamless, strategic and successful.
             </p>
             

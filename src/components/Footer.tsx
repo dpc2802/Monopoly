@@ -34,9 +34,9 @@ export default function Footer() {
             </Link>
             <h5 className="text-white text-xs font-bold uppercase tracking-widest mb-5">Follow Us</h5>
             <div className="flex gap-3">
-              <Link href="#" aria-label="LinkedIn" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-teal hover:text-brand-teal transition-all duration-300">
+              <a href="https://www.linkedin.com/in/monopoly-recruitment-talent/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-teal hover:text-brand-teal transition-all duration-300">
                 <LinkedinIcon />
-              </Link>
+              </a>
               <Link href="#" aria-label="Instagram" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-brand-teal hover:text-brand-teal transition-all duration-300">
                 <InstagramIcon />
               </Link>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li className="flex items-center gap-3 group">
                 <Mail size={14} className="text-brand-teal shrink-0" />
                 <span className="group-hover:text-brand-teal transition-colors duration-200 break-all">
-                  info@monopolyrecruitment.com
+                  monopolyrecruitment.talent@gmail.com
                 </span>
               </li>
               <li className="flex items-start gap-3">
