@@ -1,0 +1,371 @@
+/*
+ * MONOPOLY RECRUITMENT — Section Styles
+ * Layout and visual rules specific to each page section.
+ * Sections are ordered as they appear on the page.
+ */
+
+@layer sections {
+
+  /* ═══════════════════════════════════════════════════════════
+     1. HERO — "Our Promise"
+     Full-viewport-height section with dark photo overlay.
+  ═══════════════════════════════════════════════════════════ */
+
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: var(--white);
+    background: #0d1117;
+    /* Soft curve to eliminate the flat/rectangular look */
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+  }
+
+  /* Hero background photo */
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    z-index: 0;
+    animation: hero-zoom 14s ease-out forwards;
+  }
+
+  @keyframes hero-zoom {
+    from { transform: scale(1.05); }
+    to   { transform: scale(1); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__bg { animation: none; }
+  }
+
+  /* Multi-layer dark overlay */
+  .hero__overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to bottom,
+        rgba(5, 10, 18, 0.50)  0%,
+        rgba(5, 10, 18, 0.72) 50%,
+        rgba(5, 10, 18, 0.88) 100%
+      );
+    z-index: 1;
+  }
+
+  /* Content sits above overlay — Glassmorphism Left-Aligned */
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+    padding-top: 65px; /* Compensate for ultra-thin fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-right: auto;
+    margin-left: max(var(--container-padding), 6vw);
+    gap: var(--space-6);
+    
+    /* Elegant glass panel */
+    background: rgba(12, 18, 28, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--brand-teal);
+    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+    padding: clamp(2rem, 5vw, 4rem);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    
+    animation: hero-fadein 1s 0.25s both;
+  }
+
+  @keyframes hero-fadein {
+    from { opacity: 0; transform: translateX(-28px); }
+    to   { opacity: 1; transform: translateX(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__content { animation: none; }
+  }
+
+  /* Eyebrow label above title */
+  .hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--white);
+    border: none;
+    background: transparent;
+    padding: 0;
+    backdrop-filter: none;
+  }
+
+  /* Elegant thin line next to eyebrow (only right side since it's left-aligned) */
+  .hero__eyebrow::after {
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: var(--brand-teal);
+    opacity: 0.8;
+  }
+
+  .hero__title {
+    font-family: var(--font-sans); /* Reverted to thick sans-serif */
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+  }
+
+  /* Remove decorative rule since eyebrow has lines */
+  .hero__divider {
+    display: none;
+  }
+
+  .hero__text {
+    font-size: var(--text-lg);
+    color: rgba(255, 255, 255, 0.86);
+    line-height: 1.7;
+    max-width: 56ch;
+  }
+
+  /* Bouncing scroll hint arrow */
+  .hero__scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    color: rgba(255, 255, 255, 0.38);
+    animation: scroll-bounce 2.5s ease-in-out infinite;
+  }
+
+  @keyframes scroll-bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0);   opacity: 0.38; }
+    50%       { transform: translateX(-50%) translateY(8px); opacity: 0.65; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__scroll-hint { animation: none; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     2. WELCOME
+     White background with a soft sunburst green decoration
+     radiating from the right. Two columns: photo | content.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--welcome {
+    position: relative;
+    background: var(--white);
+    overflow: hidden;
+  }
+
+  /* Radial green wash in the right half (decorative) */
+  .section--welcome::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at 80% 50%,
+      var(--brand-green)      0%,
+      var(--brand-green-soft) 38%,
+      transparent             65%
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Subtle sunburst/conic ray lines over the green zone */
+  .section--welcome::after {
+    content: '';
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 58%;
+    height: 160%;
+    background-image: repeating-conic-gradient(
+      rgba(94, 122, 75, 0.06) 0deg 3deg,
+      transparent             3deg 12deg
+    );
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .section--welcome .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Large display title for "Welcome" */
+  .welcome-title {
+    font-family: var(--font-display);
+    font-size: var(--text-4xl);
+    font-weight: 900;
+    color: var(--brand-green-deep);
+    line-height: 1.0;
+    letter-spacing: -0.025em;
+    margin-bottom: var(--space-5);
+  }
+
+  .section--welcome .two-col__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .section--welcome .two-col__content p {
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     3. VALUE PROPOSITION — "Talent. Opportunity. Success."
+     Full dark navy section, 3-column services grid.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--services {
+    background: var(--navy);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     4. WHY CHOOSE US
+     Light green-tinted background, contains a full-width dark card.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--why-choose {
+    background: var(--brand-green-soft);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     5. WHY PARTNER WITH US
+     White background, two-column: content left | photo right.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--why-partner {
+    background: var(--white);
+  }
+
+  .section--why-partner .two-col__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .section--why-partner h2 {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .section--why-partner .text--lead {
+    color: var(--ink);
+  }
+
+  .section--why-partner p {
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     6. UK RECRUITMENT SPECIALISTS
+     Light green-tinted background, two-column: photo left | content right.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--uk-specialists {
+    background: var(--brand-green-soft);
+  }
+
+  .section--uk-specialists .two-col__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .section--uk-specialists h2 {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .section--uk-specialists .text--lead {
+    color: var(--ink);
+  }
+
+  .section--uk-specialists p {
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     7. HOW IT WORKS
+     White background, two-column: content left | photo right.
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--how-it-works {
+    background: var(--white);
+  }
+
+  .section--how-it-works .two-col__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+  }
+
+  .section--how-it-works h2 {
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+  }
+
+  .section--how-it-works .text--lead {
+    color: var(--ink);
+  }
+
+  .section--how-it-works p {
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     8. CONTACT — "Let's Get To Work"
+     Light green background containing:
+       (a) a dark rounded CTA card (image + text + button)
+       (b) the contact form below the card
+  ═══════════════════════════════════════════════════════════ */
+
+  .section--contact {
+    background: var(--brand-green-soft);
+  }
+
+  .section--contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 6vw, 5rem);
+  }
+
+}

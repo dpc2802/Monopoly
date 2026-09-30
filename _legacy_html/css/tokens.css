@@ -1,0 +1,101 @@
+/*
+ * MONOPOLY RECRUITMENT — Design Tokens
+ * Single source of truth for all colours, typography, spacing, etc.
+ * Edit here and changes propagate across the whole site.
+ *
+ * Colour palette supplied by client:
+ *   --brand-green   #DEEED1  (pale green — section backgrounds)
+ *   --gray-light    #BABABA  (borders, lines)
+ *   --gray-mid      #858585  (secondary text at large sizes, icons)
+ *   --white         #FFFFFF  (primary background)
+ *
+ * Derived tokens (DPC additions — do not change without client approval):
+ *   --brand-green-soft  lighter tint of brand green
+ *   --brand-green-deep  dark green for CTAs and interactive elements
+ *   --brand-teal        accent on dark backgrounds (title colour in dark sections)
+ *   --navy / --navy-card  dark section and card backgrounds
+ *   --ink / --ink-soft   body text (near-black with a green undertone)
+ */
+
+/* Declare CSS layer order — must be first */
+@layer tokens, base, components, sections;
+
+@layer tokens {
+  :root {
+    /* ─── BRAND COLOURS ──────────────────────────────────── */
+    --brand-green:      #DEEED1;
+    --brand-green-soft: #EEF6E8;
+    --brand-green-deep: #5E7A4B;
+    --brand-teal:       #7DBFA0;   /* accent on dark/navy backgrounds */
+
+    --gray-light: #BABABA;
+    --gray-mid:   #858585;
+
+    --navy:      #1E2A3A;          /* footer, full-dark sections */
+    --navy-card: #252F3A;          /* dark rounded cards */
+
+    --ink:      #1E2320;           /* primary text */
+    --ink-soft: #4A504C;           /* secondary text */
+
+    --white: #FFFFFF;
+
+    /* WhatsApp brand colour — do not change */
+    --whatsapp-green: #25D366;
+
+    /* ─── TYPOGRAPHY ────────────────────────────────────── */
+    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-sans:    'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Fluid type scale (min @ mobile → max @ desktop) */
+    --text-xs:   clamp(0.75rem,  1.5vw,  0.875rem);
+    --text-sm:   clamp(0.875rem, 1.8vw,  1rem);
+    --text-base: clamp(1rem,     2vw,    1.0625rem);
+    --text-lg:   clamp(1.0625rem,2.4vw,  1.25rem);
+    --text-xl:   clamp(1.25rem,  3vw,    1.5rem);
+    --text-2xl:  clamp(1.5rem,   4vw,    2rem);
+    --text-3xl:  clamp(1.875rem, 4.5vw,  2.5rem);
+    --text-4xl:  clamp(2.25rem,  5.5vw,  3.5rem);
+    --text-hero: clamp(2.75rem,  7vw,    5rem);
+
+    /* ─── SPACING ────────────────────────────────────────── */
+    --space-1:  0.25rem;
+    --space-2:  0.5rem;
+    --space-3:  0.75rem;
+    --space-4:  1rem;
+    --space-5:  1.25rem;
+    --space-6:  1.5rem;
+    --space-8:  2rem;
+    --space-10: 2.5rem;
+    --space-12: 3rem;
+    --space-16: 4rem;
+    --space-20: 5rem;
+    --space-24: 6rem;
+
+    /* ─── LAYOUT ─────────────────────────────────────────── */
+    --container-max:     1200px;
+    --container-padding: clamp(1.25rem, 5vw, 3rem);
+    --section-py:        clamp(4rem, 8vw, 7rem);
+
+    /* ─── BORDERS / RADIUS ───────────────────────────────── */
+    --radius-sm:   8px;
+    --radius-md:   12px;
+    --radius-lg:   20px;
+    --radius-xl:   32px;
+    --radius-pill: 100px;
+
+    /* ─── SHADOWS ─────────────────────────────────────────── */
+    --shadow-sm:  0 1px  4px  rgba(0, 0, 0, 0.08);
+    --shadow-md:  0 4px  16px rgba(0, 0, 0, 0.12);
+    --shadow-lg:  0 8px  32px rgba(0, 0, 0, 0.18);
+
+    /* ─── TRANSITIONS ─────────────────────────────────────── */
+    --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+    --transition:     300ms var(--ease-out);
+    --transition-slow:600ms var(--ease-out);
+
+    /* ─── Z-INDEX ─────────────────────────────────────────── */
+    --z-nav:      100;
+    --z-whatsapp: 150;
+    --z-overlay:  200;
+  }
+}
