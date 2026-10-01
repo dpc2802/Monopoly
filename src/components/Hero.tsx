@@ -26,11 +26,11 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-full flex justify-center mt-6 mb-12 text-center z-20"
           >
-            <div className="relative flex items-center justify-center w-full max-w-[280px] sm:max-w-[360px]">
+            <div className="relative flex items-center justify-center w-full max-w-[400px] sm:max-w-[450px]">
               <img 
                 src="/assets/img/logo.png" 
                 alt="Monopoly Recruitment"
-                className="w-full h-auto object-contain scale-[1.5] sm:scale-[1.25] drop-shadow-md"
+                className="w-full h-auto object-contain drop-shadow-md"
               />
             </div>
           </motion.div>
