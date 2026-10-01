@@ -25,8 +25,8 @@ export default function WelcomeSection() {
               className="relative w-full aspect-[4/3] lg:aspect-[16/12] rounded-[2rem] overflow-hidden shadow-xl border-4 border-white"
             >
               <Image 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop" 
-                alt="Candidates waiting"
+                src="/assets/img/brand-card.jpg" 
+                alt="Monopoly Recruitment Brand Identity"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-105"
                 unoptimized
