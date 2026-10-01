@@ -28,11 +28,11 @@ export default function Navbar() {
   });
 
   const links = [
-    { label: "Home", href: "#home", active: true },
-    { label: "About Us", href: "#welcome" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Our Services", href: "#services" },
-    { label: "Contact Us", href: "#contact-form" },
+    { label: "Home", href: "/#home", active: true },
+    { label: "About Us", href: "/#welcome" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Our Services", href: "/#services" },
+    { label: "Contact Us", href: "/#contact-form" },
   ];
 
   return (
@@ -43,21 +43,21 @@ export default function Navbar() {
       }}
       animate={hidden ? "hidden" : "visible"}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-      className={`fixed top-3 md:top-6 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-[1100px] z-50 transition-all duration-300 rounded-2xl md:rounded-full ${
+      className={`fixed top-4 right-4 md:right-auto md:top-6 md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-[1100px] z-50 transition-all duration-300 md:rounded-full ${
         isScrolled 
-          ? "bg-white/95 backdrop-blur-xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] py-3 border border-gray-100" 
-          : "bg-white/95 backdrop-blur-lg shadow-md py-4 border border-gray-100"
+          ? "md:bg-white/95 md:backdrop-blur-xl md:shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] md:py-3 md:border md:border-gray-100" 
+          : "md:bg-white/95 md:backdrop-blur-lg md:shadow-md md:py-4 md:border md:border-gray-100"
       }`}
     >
-      <div className="px-5 md:px-6 transition-all duration-400 ease-in-out flex items-center justify-between w-full">
+      <div className="transition-all duration-400 ease-in-out flex items-center justify-end md:justify-between w-full md:px-6">
         
-        {/* Left Side: Real Logo — negative margin lets it breathe without expanding the bar */}
-        <div className="flex items-center gap-3 md:gap-4">
-          <Link href="#home" className="flex items-center z-10 -my-3">
+        {/* Left Side: Real Logo — hidden on mobile */}
+        <div className="hidden md:flex items-center gap-3 md:gap-4 relative">
+          <Link href="/#home" className="flex items-center z-10 -my-6 md:-my-8">
             <img
               src="/assets/img/logo.png"
               alt="Monopoly Recruitment"
-              className="h-14 md:h-16 w-auto object-contain"
+              className="h-16 md:h-24 w-auto object-contain"
             />
           </Link>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <Link 
-            href="#contact-form"
+            href="/#contact-form"
             className="ml-6 xl:ml-8 px-6 py-2.5 text-[11px] tracking-[0.1em] uppercase font-bold rounded-full bg-navy text-white hover:bg-brand-teal transition-all shadow-sm flex items-center gap-2 group"
           >
             Apply Now 
@@ -112,7 +112,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[100%] left-0 right-0 mt-3 bg-white/95 backdrop-blur-xl rounded-[1.5rem] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 lg:hidden flex flex-col p-6 gap-3 overflow-hidden z-50"
+            className="fixed top-[70px] right-4 w-[calc(100vw-32px)] max-w-[320px] bg-white/95 backdrop-blur-xl rounded-[1.5rem] shadow-[0_20px_40px_-10px_rgba(0,0,0,0.15)] border border-gray-100 lg:hidden flex flex-col p-6 gap-3 overflow-hidden z-50 origin-top-right"
           >
             {links.map((link) => (
               <Link 
@@ -125,7 +125,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link 
-              href="#contact-form"
+              href="/#contact-form"
               onClick={() => setIsMobileMenuOpen(false)}
               className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-navy text-white text-[14px] font-bold tracking-widest uppercase rounded-xl hover:bg-brand-teal transition-colors mt-4 shadow-md"
             >

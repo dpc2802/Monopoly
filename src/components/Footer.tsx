@@ -51,11 +51,11 @@ export default function Footer() {
             <h5 className="text-white text-xs font-bold uppercase tracking-widest mb-6">Information</h5>
             <ul className="space-y-4 text-sm">
               {[
-                { label: "Welcome", href: "#welcome" },
-                { label: "Why Choose Us", href: "#why-choose-us" },
-                { label: "Why Partner With Us", href: "#why-partner" },
-                { label: "UK Recruitment Specialists", href: "#uk-specialists" },
-                { label: "How It Works", href: "#how-it-works" },
+                { label: "Welcome", href: "/#welcome" },
+                { label: "Why Choose Us", href: "/#why-choose-us" },
+                { label: "Why Partner With Us", href: "/#why-partner" },
+                { label: "UK Recruitment Specialists", href: "/#uk-specialists" },
+                { label: "How It Works", href: "/#how-it-works" },
               ].map(item => (
                 <li key={item.label}>
                   <a href={item.href} className="hover:text-brand-teal transition-colors duration-200">{item.label}</a>
@@ -95,9 +95,16 @@ export default function Footer() {
       </div>
 
       {/* ── BOTTOM BAR ── */}
-      <div className="max-w-[1200px] mx-auto px-6 py-7 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/20">
-        <p>© {new Date().getFullYear()} Monopoly Recruitment. All rights reserved.</p>
-        <p className="uppercase tracking-[0.25em] text-brand-teal/40 font-bold">TALENT. OPPORTUNITY. SUCCESS.</p>
+      <div className="max-w-[1200px] mx-auto px-6 py-7 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+        <div className="flex flex-col md:flex-row items-center gap-2 md:gap-6">
+          <p>© {new Date().getFullYear()} Monopoly Recruitment. All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <Link href="/privacy-policy" className="hover:text-brand-teal transition-colors">Privacy Policy</Link>
+            <span className="opacity-20">•</span>
+            <Link href="/terms-of-service" className="hover:text-brand-teal transition-colors">Terms of Service</Link>
+          </div>
+        </div>
+        <p className="uppercase tracking-[0.25em] text-brand-teal/40 font-bold hidden lg:block">TALENT. OPPORTUNITY. SUCCESS.</p>
       </div>
 
     </footer>

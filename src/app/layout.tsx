@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   description: "Bilingual recruitment agency connecting Colombian professionals with remote jobs in the UK.",
 };
 
+import CookieBanner from "@/components/CookieBanner";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth" translate="no" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <CookieBanner />
       </body>
     </html>
   );

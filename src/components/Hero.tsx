@@ -4,10 +4,13 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import WorldMapBackground from "./WorldMapBackground";
 
 export default function Hero() {
   return (
     <section id="home" className="relative z-30 flex flex-col items-center justify-start lg:justify-center bg-white overflow-hidden rounded-b-[3.5rem] lg:rounded-b-[4rem] shadow-[0_30px_60px_rgba(11,37,69,0.15)] pt-[90px] md:pt-[100px] pb-24 lg:pb-24 h-auto lg:min-h-[100dvh]">
+      
+      <WorldMapBackground />
       
       {/* Main Content Container */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-6 flex flex-col items-center lg:h-full lg:flex-1">
@@ -23,11 +26,11 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-full flex justify-center mt-6 mb-2 text-center z-20"
           >
-            <div className="relative flex items-center justify-center w-full max-w-[280px] sm:max-w-[360px]">
+            <div className="relative flex items-center justify-center w-full max-w-[320px] sm:max-w-[400px]">
               <img 
                 src="/assets/img/logo.png" 
                 alt="Monopoly Recruitment"
-                className="w-full h-auto object-contain scale-[1.5] sm:scale-[1.25] drop-shadow-md"
+                className="w-full h-auto object-contain scale-[1.6] sm:scale-[1.35] drop-shadow-md"
               />
             </div>
           </motion.div>
@@ -118,7 +121,7 @@ export default function Hero() {
               src="/assets/img/logo.png" 
               alt="Monopoly Recruitment"
               className="w-auto object-contain drop-shadow-md origin-center"
-              style={{ height: 'clamp(140px, 20vh, 240px)', transform: 'scale(2.1)' }}
+              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.3)' }}
             />
           </div>
 
