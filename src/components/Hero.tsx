@@ -30,7 +30,7 @@ export default function Hero() {
               <img 
                 src="/assets/img/logo.png" 
                 alt="Monopoly Recruitment"
-                className="w-full h-auto object-contain scale-[1.7] sm:scale-[1.4] drop-shadow-md"
+                className="w-full h-auto object-contain scale-[1.5] sm:scale-[1.25] drop-shadow-md"
               />
             </div>
           </motion.div>
@@ -121,7 +121,7 @@ export default function Hero() {
               src="/assets/img/logo.png" 
               alt="Monopoly Recruitment"
               className="w-auto object-contain drop-shadow-md origin-center"
-              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.7) translateY(15px)' }}
+              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.4) translateY(15px)' }}
             />
           </div>
 
