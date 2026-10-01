@@ -29,11 +29,14 @@ export default function PrivacyPolicy() {
             <div className="sticky top-32">
               <h3 className="text-[10px] font-bold text-navy uppercase tracking-widest mb-8 border-b border-gray-100 pb-4">Contents</h3>
               <ul className="space-y-5 text-sm text-gray-500 font-medium">
-                <li><a href="#introduction" className="hover:text-brand-teal transition-colors">1. Introduction</a></li>
+                <li><a href="#overview" className="hover:text-brand-teal transition-colors">1. Overview</a></li>
                 <li><a href="#information" className="hover:text-brand-teal transition-colors">2. Information We Collect</a></li>
-                <li><a href="#usage" className="hover:text-brand-teal transition-colors">3. How We Use Your Data</a></li>
-                <li><a href="#sharing" className="hover:text-brand-teal transition-colors">4. Data Sharing & Transfers</a></li>
-                <li><a href="#security" className="hover:text-brand-teal transition-colors">5. Security & Legal Rights</a></li>
+                <li><a href="#purpose" className="hover:text-brand-teal transition-colors">3. Purpose & Legal Basis</a></li>
+                <li><a href="#transfers" className="hover:text-brand-teal transition-colors">4. International Transfers</a></li>
+                <li><a href="#retention" className="hover:text-brand-teal transition-colors">5. Data Retention</a></li>
+                <li><a href="#rights" className="hover:text-brand-teal transition-colors">6. Your Rights</a></li>
+                <li><a href="#security" className="hover:text-brand-teal transition-colors">7. Security & Confidentiality</a></li>
+                <li><a href="#updates" className="hover:text-brand-teal transition-colors">8. Updates to This Policy</a></li>
               </ul>
             </div>
           </div>
@@ -47,55 +50,63 @@ export default function PrivacyPolicy() {
               prose-li:text-gray-600 prose-li:text-[15px] prose-ul:mb-8
               prose-a:text-brand-teal prose-a:font-semibold prose-a:no-underline hover:prose-a:underline">
               
-              <h2 id="introduction" className="!mt-0">1. Introduction</h2>
+              <h2 id="overview" className="!mt-0">1. Overview</h2>
               <p>
-                At <strong>Monopoly Recruitment</strong> ("we", "our", or "us"), we are committed to protecting and respecting your privacy. 
-                This Privacy Policy explains how we collect, use, and protect your personal data when you use our website and recruitment services, 
-                in compliance with the UK General Data Protection Regulation (UK GDPR) and applicable Colombian Data Protection Laws (Ley 1581 de 2012).
+                <strong>Monopoly Recruitment</strong> ("we", "us", or "our") is committed to protecting and respecting your privacy. This Privacy Policy outlines how we collect, use, store, and share your personal data when you use our website, submit your CV, or interact with our recruitment services.
+              </p>
+              <p>
+                We operate in compliance with the UK General Data Protection Regulation (UK GDPR), the UK Data Protection Act 2018 (DPA 2018), regulated by the Information Commissioner's Office (ICO), and Ley 1581 de 2012 (Superintendencia de Industria y Comercio - SIC) in Colombia.
               </p>
 
               <h2 id="information">2. Information We Collect</h2>
-              <p>We may collect and process the following data about you:</p>
+              <p>We collect personal data that you voluntarily provide to us during recruitment processes, including:</p>
               <ul>
-                <li><strong>Identity Data:</strong> First name, last name, title.</li>
-                <li><strong>Contact Data:</strong> Email address, telephone numbers.</li>
-                <li><strong>Professional Data:</strong> CVs, employment history, qualifications, and other information you provide when applying for roles.</li>
-                <li><strong>Usage Data:</strong> Information about how you use our website (via cookies and analytics).</li>
+                <li><strong>Contact Information:</strong> Full name, email address, phone number, location, and country of residence.</li>
+                <li><strong>Professional & Academic Details:</strong> Curriculum Vitae (CV/Resume), work experience, education, language proficiency, skill sets, and portfolio links (e.g., LinkedIn, GitHub).</li>
+                <li><strong>Communication History:</strong> Messages sent via our website forms or direct email correspondence.</li>
               </ul>
-
-              <h2 id="usage">3. How We Use Your Information</h2>
-              <p>We use your personal data to:</p>
-              <ul>
-                <li>Match you with suitable remote job opportunities in the UK.</li>
-                <li>Communicate with you regarding your application and our recruitment processes.</li>
-                <li>Improve our website, services, and customer experience.</li>
-                <li>Comply with our legal and regulatory obligations.</li>
-              </ul>
-
-              <h2 id="sharing">4. Data Sharing and Transfers</h2>
               <p>
-                As an agency connecting Colombian talent with UK enterprises, your data may be shared with prospective employers based in the United Kingdom. 
-                We ensure that all data transfers are conducted securely and in accordance with international data protection standards. 
-                We do not sell your personal data to third parties.
+                <em>Note:</em> We do not intentionally collect sensitive data (e.g., health status, political opinions, religious beliefs) unless explicitly required for specific legal or compliance reasons.
               </p>
 
-              <h2 id="security">5. Data Security & Legal Rights</h2>
-              <p>
-                We have implemented appropriate security measures to prevent your personal data from being accidentally lost, used, or accessed in an unauthorized way, altered, or disclosed. 
-                Access to your personal data is limited to those employees, agents, and clients who have a business need to know.
-              </p>
-              <p>Under certain circumstances, you have rights under data protection laws in relation to your personal data, including the right to:</p>
+              <h2 id="purpose">3. Purpose & Legal Basis for Processing</h2>
+              <p>We process your personal data for the following lawful purposes under UK GDPR (Article 6) and Colombian Law:</p>
               <ul>
-                <li>Request access to your personal data.</li>
-                <li>Request correction of your personal data.</li>
-                <li>Request erasure of your personal data (the "right to be forgotten").</li>
-                <li>Object to processing of your personal data.</li>
+                <li><strong>Recruitment & Candidate Evaluation:</strong> To assess your qualifications, match you with remote or international job vacancies, and present your profile to potential hiring companies in the UK and internationally (Legitimate Interest & Consent).</li>
+                <li><strong>Communication:</strong> To contact you regarding application updates, interview schedules, or new job opportunities.</li>
+                <li><strong>Legal & Regulatory Compliance:</strong> To fulfill our statutory and legal obligations in the UK and Colombia.</li>
               </ul>
 
-              <h2 id="contact">6. Contact Us</h2>
+              <h2 id="transfers">4. International Data Transfers</h2>
               <p>
-                If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <br/>
-                <strong>Email:</strong> <a href="mailto:monopolyrecruitment.talent@gmail.com">monopolyrecruitment.talent@gmail.com</a>
+                By submitting your information to Monopoly Recruitment, you acknowledge and explicitly agree that your personal data may be transferred, stored, and processed across international borders (specifically between Colombia, the United Kingdom, and third-party client jurisdictions) for hiring and evaluation purposes. All transfers are conducted under appropriate security safeguards and strict confidentiality agreements.
+              </p>
+
+              <h2 id="retention">5. Data Retention</h2>
+              <p>
+                We retain your CV and personal details in our talent database for a maximum period of 24 months from your last interaction with us, after which your data will be securely deleted or anonymized, unless you request earlier deletion or grant us permission to keep it longer for future roles.
+              </p>
+
+              <h2 id="rights">6. Your Rights</h2>
+              <p>Under UK GDPR and Ley 1581 de 2012, you have the following rights regarding your personal data:</p>
+              <ul>
+                <li><strong>Right to Access:</strong> Request a copy of the personal information we hold about you.</li>
+                <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
+                <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request the complete deletion of your CV and personal records from our databases.</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent for data processing or international transfer at any time.</li>
+              </ul>
+              <p>
+                To exercise any of these rights, please contact our Data Protection Lead at: <a href="mailto:monopolyrecruitment.talent@gmail.com">monopolyrecruitment.talent@gmail.com</a>.
+              </p>
+
+              <h2 id="security">7. Security & Confidentiality</h2>
+              <p>
+                We implement appropriate technical and organizational measures (including SSL encryption, restricted access, and secure cloud storage) to protect your personal data against unauthorized access, loss, or disclosure.
+              </p>
+
+              <h2 id="updates">8. Updates to This Policy</h2>
+              <p>
+                We reserve the right to update this Privacy Policy as regulatory requirements evolve. Any changes will be posted directly on this page with an updated revision date.
               </p>
 
             </div>
