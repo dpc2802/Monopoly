@@ -26,11 +26,12 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="w-full flex justify-center mt-6 mb-2 text-center z-20"
           >
-            <div className="relative flex items-center justify-center w-full max-w-[280px] sm:max-w-[360px]">
+            <div className="relative flex items-center justify-center w-full max-w-[420px] sm:max-w-[450px]">
               <img 
                 src="/assets/img/logo.png" 
                 alt="Monopoly Recruitment"
-                className="w-full h-auto object-contain scale-[1.5] sm:scale-[1.25] drop-shadow-md"
+                className="w-full h-auto object-contain drop-shadow-md"
+                style={{ imageRendering: '-webkit-optimize-contrast' }}
               />
             </div>
           </motion.div>
@@ -115,13 +116,16 @@ export default function Hero() {
           {/* Main Logo (Restored to original PNG) */}
           <div 
             className="relative flex items-center justify-center w-full max-w-none"
-            style={{ marginTop: 'clamp(30px, 6vh, 60px)', marginBottom: 'clamp(0px, 1vh, 10px)' }}
+            style={{ marginTop: 'clamp(20px, 4vh, 40px)', marginBottom: 'clamp(10px, 2vh, 20px)' }}
           >
             <img 
               src="/assets/img/logo.png" 
               alt="Monopoly Recruitment"
               className="w-auto object-contain drop-shadow-md origin-center"
-              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.3)' }}
+              style={{ 
+                height: 'clamp(320px, 45vh, 480px)', 
+                imageRendering: '-webkit-optimize-contrast' 
+              }}
             />
           </div>
 
