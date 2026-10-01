@@ -121,7 +121,7 @@ export default function Hero() {
               src="/assets/img/logo.png" 
               alt="Monopoly Recruitment"
               className="w-auto object-contain drop-shadow-md origin-center"
-              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.7)' }}
+              style={{ height: 'clamp(160px, 22vh, 260px)', transform: 'scale(2.7) translateY(15px)' }}
             />
           </div>
 
