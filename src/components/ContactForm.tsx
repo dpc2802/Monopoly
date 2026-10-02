@@ -131,6 +131,43 @@ export default function ContactForm() {
                     ))}
                   </div>
 
+                  {/* Job Field Dropdown */}
+                  <div className="relative mb-10 mt-6">
+                    <label
+                      htmlFor="jobField"
+                      className={`absolute left-0 text-xs font-bold uppercase tracking-widest transition-all duration-300 pointer-events-none -translate-y-5 text-[10px] ${
+                        focused === "jobField" ? "text-brand-teal" : "text-brand-gray-light/80"
+                      }`}
+                    >
+                      Area of Interest
+                    </label>
+                    <select
+                      id="jobField"
+                      name="jobField"
+                      required
+                      onFocus={() => setFocused("jobField")}
+                      onBlur={() => setFocused(null)}
+                      className={`${inputBase} appearance-none bg-transparent cursor-pointer ${
+                        focused === "jobField"
+                          ? "border-brand-teal"
+                          : "border-brand-gray-light/30"
+                      }`}
+                      defaultValue=""
+                    >
+                      <option value="" disabled className="text-gray-400">Select a job field...</option>
+                      <option value="Financial Services and FinTech" className="text-navy">Financial Services and FinTech</option>
+                      <option value="E-Commerce and Retail Operations" className="text-navy">E-Commerce and Retail Operations</option>
+                      <option value="SaaS and Technology" className="text-navy">SaaS and Technology</option>
+                      <option value="Construction and Real Estate" className="text-navy">Construction and Real Estate</option>
+                      <option value="Digital Marketing and Sales" className="text-navy">Digital Marketing and Sales</option>
+                      <option value="Operations" className="text-navy">Operations</option>
+                      <option value="Other" className="text-navy">Other</option>
+                    </select>
+                    <div className="absolute right-2 top-4 pointer-events-none text-brand-gray-light">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                  </div>
+
                   {/* Message field — full width */}
                   <div className="relative mb-10">
                     <label
